@@ -1,13 +1,5 @@
 package co.com.sofka.stepdefinition.jsonplaceholder.createpost;
 
-import static co.com.sofka.task.DoPost.doPost;
-import static co.com.sofka.util.CreatePostCodeKey.*;
-import static co.com.sofka.util.FileUtilities.readFile;
-import static co.com.sofka.util.ResourceCases.CREATE_POST;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
-import static org.hamcrest.CoreMatchers.*;
-
 import co.com.sofka.model.jsonplaceholder.post.Post;
 import co.com.sofka.question.jsonplaceholder.createpost.CreatePostQuestion;
 import co.com.sofka.stepdefinition.jsonplaceholder.common.ServiceSetUpJSONPlaceholder;
@@ -23,6 +15,15 @@ import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
 
 import java.util.HashMap;
+
+import static co.com.sofka.task.DoPost.doPost;
+import static co.com.sofka.util.CreatePostCodeKey.*;
+import static co.com.sofka.util.FileUtilities.readFile;
+import static co.com.sofka.util.ResourceCases.CREATE_POST;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.notNullValue;
 
 public class CreatePostTestStepDefinition extends ServiceSetUpJSONPlaceholder {
     private final HashMap<String, Object> headers = new HashMap<>();

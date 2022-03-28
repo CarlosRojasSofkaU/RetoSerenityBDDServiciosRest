@@ -1,17 +1,6 @@
 package co.com.sofka.stepdefinition.reqres.updateuser;
 
 import co.com.sofka.stepdefinition.reqres.common.ServiceSetUpReqRes;
-
-import static co.com.sofka.question.reqres.updateuser.UpdateUserQuestion.response;
-import static co.com.sofka.task.DoPut.doPut;
-import static co.com.sofka.util.FileUtilities.readFile;
-import static co.com.sofka.util.ResourceCases.UPDATE_USER;
-import static co.com.sofka.util.UpdateUserCodeKey.JOB_CODE;
-import static co.com.sofka.util.UpdateUserCodeKey.NAME_CODE;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
-import static org.hamcrest.CoreMatchers.*;
-
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
@@ -24,6 +13,16 @@ import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
 
 import java.util.HashMap;
+
+import static co.com.sofka.question.reqres.updateuser.UpdateUserQuestion.response;
+import static co.com.sofka.task.DoPut.doPut;
+import static co.com.sofka.util.FileUtilities.readFile;
+import static co.com.sofka.util.ResourceCases.UPDATE_USER;
+import static co.com.sofka.util.UpdateUserCodeKey.JOB_CODE;
+import static co.com.sofka.util.UpdateUserCodeKey.NAME_CODE;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
+import static org.hamcrest.CoreMatchers.notNullValue;
 
 public class UpdateUserTestStepDefinition extends ServiceSetUpReqRes{
     private final HashMap<String, Object> headers = new HashMap<>();

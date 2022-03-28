@@ -3,12 +3,6 @@ package co.com.sofka.stepdefinition.reqres.getuser;
 import co.com.sofka.model.reqres.user.Data;
 import co.com.sofka.question.reqres.getuser.GetUserQuestion;
 import co.com.sofka.stepdefinition.reqres.common.ServiceSetUpReqRes;
-import static co.com.sofka.task.GetResource.getResource;
-import static co.com.sofka.util.ResourceCases.SINGLE_USER;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
-import static org.hamcrest.CoreMatchers.*;
-
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
@@ -20,6 +14,13 @@ import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
 
 import java.util.HashMap;
+
+import static co.com.sofka.task.GetResource.getResource;
+import static co.com.sofka.util.ResourceCases.SINGLE_USER;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.notNullValue;
 
 public class GetUserTestStepDefinition extends ServiceSetUpReqRes {
     private final HashMap<String, Object> headers = new HashMap<>();

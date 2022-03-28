@@ -2,6 +2,7 @@ package co.com.sofka.stepdefinition.reqres.common;
 
 import io.restassured.RestAssured;
 import org.apache.log4j.PropertyConfigurator;
+
 import static co.com.sofka.util.Log4jValues.LOG4J_PROPERTIES_FILE_PATH;
 import static co.com.sofka.util.Log4jValues.USER_DIR;
 
