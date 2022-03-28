@@ -3,8 +3,8 @@ package co.com.sofka.util;
 public enum ResourceCases {
     SINGLE_USER("/users"),
     UPDATE_USER("/users/2"),
-    TWO_SECONDS(""),
-    THREE_SECONDS("");
+    CREATE_POST("/posts"),
+    DELETE_ALBUM("/albums/");
 
     private final String value;
 
