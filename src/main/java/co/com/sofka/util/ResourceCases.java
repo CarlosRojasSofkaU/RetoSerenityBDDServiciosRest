@@ -2,7 +2,7 @@ package co.com.sofka.util;
 
 public enum ResourceCases {
     SINGLE_USER("/users"),
-    REGISTER(""),
+    UPDATE_USER("/users/2"),
     TWO_SECONDS(""),
     THREE_SECONDS("");
 
